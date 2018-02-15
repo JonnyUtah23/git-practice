@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jonathon Esack - About Me</title>
+    
+    <!-- ----- Begin BOOTSTRAP ----- -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <!-- ----- End BOOTSTRAP ----- -->
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+	<header class="header interior">
+        <div class="logo">
+            <a href="index.html">Jonathon Esack <br/>
+                <span>Motivated &bull; Skilled &bull; Creative</span></a>
+            <!--<div class="logo-name">
+                Jonathon Esack
+            </div>
+            <div class="logo-tagline">
+                Motivated &bull; Skilled &bull; Creative
+            </div>-->
+        </div>
+        <div class="hdr-line">&nbsp;</div>
+        <div class="social-nav">
+            <a href="https://www.facebook.com/jonathon.esack" class="ico-facebook">Facebook</a>
+            <a href="https://instagram.com/jonathon.esack" class="ico-instagram">Instagram</a>
+            <a href="mailto:jonathon.esack@gmail.com" class="ico-email">Email</a>
+        </div>        
+    </header>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 40.761140, lng: -111.882889};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom:12,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDooui_ltrVRwm2VY4phaWN8SLG1F-Jd5M&callback=initMap">
+    </script>
+    <div class="navigation small">
+        <a href="about-me.html" class="nav-btn"><span>About Me</span></a>
+        &nbsp;
+        <a href="why-im-here.html" class="nav-btn"><span>Why I'm Here</span></a>
+        &nbsp;
+        <a href="get-in-touch.html" class="nav-btn active"><span>Get In Touch</span></a>
+    </div>
+    <div class="content">
+        <form action="mailto:someone@example.com" method="post" enctype="text/plain">
+            <div class="row">
+                <div class="col">
+                    Name:<br>
+                    <input type="text" name="name" placeholder="Enter name" class="form-control" /><br>
+                </div>
+                <div class="col">
+                    E-mail:<br>
+                    <input type="text" name="mail" placeholder="Enter email" class="form-control" /><br>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    Leave a message:<br>
+                    <textarea type="text" name="comment" rows="3" placeholder="Leave a message" class="form-control"></textarea><br><br>
+                    <button type="submit" class="btn btn-primary" style="width: 200px;">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">&copy; 2017 Jonathon Esack</span>
+      </div>
+    </footer>
+</body>
+
+</html>
